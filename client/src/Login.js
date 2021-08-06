@@ -1,9 +1,11 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+// import redirect_uri from "./config/"
 
 const client_id = "11811ab54cf1454bbfa5075f5ed86dba";
 const response_type = "code";
-const redirect_uri = "http://localhost:3000";
+const redirect_uri = 
+    "http://localhost:3000" || "https://monde-green.herokuapp.com";
 const scope = [
     "streaming",
     "user-read-email",

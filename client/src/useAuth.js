@@ -8,7 +8,7 @@ export default function useAuth(code) {
 
     useEffect(() => {
         return axios
-            .post("http://localhost:3001/login", {
+            .post("/login", {
                 code,
             })
             .then((res) => {
@@ -18,12 +18,12 @@ export default function useAuth(code) {
 
                 // Set the access token on the API object to use it in later calls
 
-                window.history.pushState({}, null, "/");
+                // window.history.pushState({}, null, "/");
             })
             .catch((err) => {
                 console.log("======================================");
                 console.error(err);
-                window.location = "/";
+                // window.location = "/";
             });
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [code]);
@@ -36,7 +36,7 @@ export default function useAuth(code) {
             const interval = setInterval(() => {
 
                 axios
-                    .post("http://localhost:3001/refresh", {
+                    .post("/refresh", {
                         refreshToken,
                     })
                     .then((res) => {
@@ -49,7 +49,7 @@ export default function useAuth(code) {
                     })
                     .catch((err) => {
                         console.error(err);
-                        window.location = "/";
+                        // window.location = "/";
                     });
             }, (expiresIn - 60) * 1000);
             return () => clearInterval(interval);
