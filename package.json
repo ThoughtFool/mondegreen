@@ -8,7 +8,6 @@
     "description": "",
     "main": "./server/server.js",
     "scripts": {
-        "postinstall": "npm run build",
         "start": "cd server && npm i && node server.js"
     },
     "repository": {
