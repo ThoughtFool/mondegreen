@@ -21,7 +21,7 @@
         "nodemon": "^2.0.12"
     },
     "scripts": {
-        "start": "cd server && node server.js"
+        "start": "node server.js"
     },
     "repository": {
         "type": "git",
