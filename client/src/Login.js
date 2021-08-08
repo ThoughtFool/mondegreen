@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 const client_id = "11811ab54cf1454bbfa5075f5ed86dba";
 const response_type = "code";
 const redirect_uri =
-    "https://monde-green.herokuapp.com" || "http://localhost:3000";
+    "http://localhost:3000" || "https://monde-green.herokuapp.com";
 const scope = [
     "streaming",
     "user-read-email",

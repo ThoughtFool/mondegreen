@@ -77,6 +77,7 @@ app.get("/lyrics", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
+    console.log(__dirname);
     // res.sendFile(path.join(__dirname, "public/build/index.html"));
     res.render("index", function (err, html) {
         if (err) {
