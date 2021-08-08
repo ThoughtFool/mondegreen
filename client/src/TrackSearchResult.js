@@ -18,7 +18,7 @@ export default function TrackSearchResults({ track, chooseTrack }) {
                 alt="album art"
                 style={{ height: "75px", width: "75px" }}
             />
-            <div className="ml-3" sytle={{ paddingLeft: "15px"}}>
+            <div className="ml-3 offset-1" style={{ fontWeight: "bold" }}>
                 <div>{track.title}</div>
                 <div className="text-muted">{track.artist}</div>
             </div>

@@ -131,7 +131,7 @@ export default function Dashboard({ code }) {
                         className="text-center"
                         style={{
                             whiteSpace: "pre",
-                            backgroundColor: "rgb(255,255,255, .9)",
+                            backgroundColor: "rgb(255,255,255, .7)",
                             fontSize: "1rem",
                             fontWeight: "bold",
                         }}
