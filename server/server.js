@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const SpotifyWebApi = require("spotify-web-api-node");
 const lyricsFinder = require("lyrics-finder");
 const PORT = process.env.PORT || 3000;
-const nodeEnv = process.env.NODE_ENV || 'development';
+// const nodeEnv = process.env.NODE_ENV || 'development';
 
 app.use(express.static(path.join(__dirname, "public/build")));
 
