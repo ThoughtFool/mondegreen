@@ -9,7 +9,6 @@ const client_id = "11811ab54cf1454bbfa5075f5ed86dba";
 const response_type = "code";
 const redirect_uri =
     "http://localhost:3000" ||
-    "https://127.0.0.1:5000" ||
     process.env.REDIRECT_URI;
 const scope = [
     "streaming",
