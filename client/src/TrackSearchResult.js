@@ -5,8 +5,9 @@ export default function TrackSearchResults({ track, chooseTrack }) {
         <div
             className="d-flex m-2 align-items-center"
             style={{
-                backgroundColor: "rgb(255,255,255, .5)",
+                backgroundColor: "rgb(255,255,255, .25)",
                 cursor: "pointer",
+                borderRadius: "8px"
             }}
             onClick={function handlePlay() {
                 chooseTrack(track);
@@ -17,7 +18,7 @@ export default function TrackSearchResults({ track, chooseTrack }) {
                 alt="album art"
                 style={{ height: "75px", width: "75px" }}
             />
-            <div className="ml-3">
+            <div className="ml-3" sytle={{ paddingLeft: "15px"}}>
                 <div>{track.title}</div>
                 <div className="text-muted">{track.artist}</div>
             </div>
