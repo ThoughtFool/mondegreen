@@ -22,6 +22,5 @@
         "start": "node server.js"
     },
     "author": "Heyou thoughtFool",
-    "license": "MIT",
-    "proxy": "http://localhost:5000"
+    "license": "MIT"
 }
