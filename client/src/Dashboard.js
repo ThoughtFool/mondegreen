@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import useAuth from "./useAuth";
 import TrackSearchResult from "./TrackSearchResult";
 import Player from "./Player";
+import VideoBackground from "./VideoBackground";
 import videoContent from "./vidBackground.mp4";
 import { Container, Form } from "react-bootstrap";
 import SpotifyWebApi from "spotify-web-api-node";
@@ -84,7 +85,8 @@ export default function Dashboard({ code }) {
             className="d-flex flex-column py-2"
             style={{ height: "100vh" }}
         >
-            <video
+            <VideoBackground videoContent={videoContent} />
+            {/* <video
                 className="bg-fullscreen"
                 autoPlay
                 loop
@@ -101,7 +103,7 @@ export default function Dashboard({ code }) {
                 }}
             >
                 <source src={videoContent} type="video/mp4" />
-            </video>
+            </video> */}
 
             <Form.Control
                 type="search"
@@ -109,7 +111,12 @@ export default function Dashboard({ code }) {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
             />
-            <div className="flex-grow-1 my-2" style={{ overflow: "auto" }}>
+            <div
+                className="flex-grow-1 my-2"
+                style={{
+                    overflow: "auto",
+                }}
+            >
                 {searchResults.map((track) => {
                     return (
                         <TrackSearchResult
@@ -124,10 +131,9 @@ export default function Dashboard({ code }) {
                         className="text-center"
                         style={{
                             whiteSpace: "pre",
-                            backgroundColor: "whitesmoke",
-                            opacity: ".7",
-                            fontsize: "18px",
-                            fontWeight: "bold"
+                            backgroundColor: "rgb(255,255,255, .9)",
+                            fontSize: "1rem",
+                            fontWeight: "bold",
                         }}
                     >
                         {lyrics}

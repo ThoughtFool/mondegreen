@@ -1,6 +1,7 @@
 import React from "react";
 
-const VideoBackground = (videoContent) => {
+const VideoBackground = (props) => {
+    console.log(props.videoContent);
     return (
         <video
             className="bg-fullscreen"
@@ -18,7 +19,7 @@ const VideoBackground = (videoContent) => {
                 zIndex: "-1",
             }}
         >
-            <source src={videoContent} type="video/mp4" />
+            <source src={props.videoContent} type="video/mp4" />
         </video>
     );
 };
