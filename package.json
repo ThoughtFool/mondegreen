@@ -8,8 +8,7 @@
     "description": "",
     "main": "./server/server.js",
     "scripts": {
-        "start": "cd server && npm i && node server.js",
-        "heroku-postbuild": "cd client && npm i && npm start"
+        "start": "cd server && npm i && node server.js"
     },
     "repository": {
         "type": "git",
